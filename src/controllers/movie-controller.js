@@ -12,7 +12,7 @@ movieController.get('/:movieId/details', (req, res) => {
 
     const movie = movieService.findOne(movieId);
 
-    res.render('details');
+    res.render('details', {movie});
 }) ;
 
 export default movieController;
