@@ -1,6 +1,6 @@
 export default [
   {
-    id: 1,
+    id: "1",
     title: "Jungle Cruise",
     genre: "Adventure",
     description:
@@ -8,7 +8,7 @@ export default [
     imageUrl: "/static/img/jungle-cruise.jpeg",
   },
   {
-    id: 2,
+    id: "2",
     title: "Man of Steel",
     genre: "Superhero",
     description:
