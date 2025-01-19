@@ -14,6 +14,7 @@ movieController.get('/search', (req, res) => {
 movieController.get('/create', (req, res) => {
     res.render('create');
 });
+
 movieController.post('/create', (req, res) => {
     const newMovie = req.body;
     
@@ -29,6 +30,6 @@ movieController.get('/:movieId/details', (req, res) => {
     movie.rating
 
     res.render('details', {movie});
-}) ;
+});
 
 export default movieController;
