@@ -8,7 +8,7 @@ export default [
     imageUrl: "/static/img/jungle-cruise.jpeg",
     director: 'Jaume Collet-Serra',
     year: '2021',
-    rating: '6.6',
+    rating: 6.6,
     category: 'movie',
   },
   {
@@ -21,7 +21,7 @@ export default [
       "https://upload.wikimedia.org/wikipedia/en/5/50/Man_of_Steel_%28film%29_poster.jpg",
       director: 'Zack Snyder',
       year: '2013',
-      rating: '7.1',
+      rating: 7.1,
       category: 'movie',
   },
   {
@@ -32,7 +32,7 @@ export default [
     director: 'Robert Rodriguez',
     year: '2019',
     imageUrl: 'https://m.media-amazon.com/images/I/91Lox3Gc6xL.jpg',
-    rating: '7.3',
+    rating: 7.3,
     description: "A deactivated cyborg's revived, but can't remember anything of her past and goes on a quest to find out who she is."
   },
 ];
