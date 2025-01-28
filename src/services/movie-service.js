@@ -18,13 +18,11 @@ export default {
 
     return query;
   },
-  
   getOne(movieId) {
     const result = Movie.findById(movieId);
 
     return result;
   },
-
   create(movieData){
     const result = Movie.create({
       ...movieData,
@@ -33,5 +31,15 @@ export default {
     });
 
     return result;
-  }
+  },
+  async attachCast(movieId, castId) {
+    //method #1
+    const movie = await Movie.findById(movieId);
+    movie.casts.push(castId);
+
+    await movie.save();
+
+    return movie;
+    //method #2
+  },
 };
