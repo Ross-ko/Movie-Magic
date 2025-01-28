@@ -1,7 +1,8 @@
 import Cast from "../models/Cast.js";
 
 export default {
-    getAll() {
+    getAll(идс) {
+        // return Cast.find({_id: {$in: ids}}); - дърводелската
         return Cast.find({});
     },
 

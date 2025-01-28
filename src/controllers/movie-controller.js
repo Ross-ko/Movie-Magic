@@ -26,9 +26,9 @@ movieController.post('/create', async (req, res) => {
 
 movieController.get('/:movieId/details', async (req, res) => {
     const movieId = req.params.movieId;
-    const movie = await movieService.getOne(movieId);
+    const movie = await movieService.getOneWithCast(movieId);
 
-    movie.rating
+    // const casts = await castService.getAll(movie.casts); - дърводелската
 
     res.render('movie/details', {movie});
 });
