@@ -24,7 +24,7 @@ export default {
     return result;
   },
   getOneWithCast(movieId) {
-    return this.getOne(movieId).populate('casts');
+    return this.getOne(movieId).populate('casts.cast');
   },
   create(movieData){
     const result = Movie.create({
@@ -35,7 +35,7 @@ export default {
 
     return result;
   },
-  async attachCast(movieId, castId) {
+  async attachCast(movieId, castId, character) {
     //method #1
     // const movie = await Movie.findById(movieId);
     // movie.casts.push(castId);
@@ -45,6 +45,6 @@ export default {
     // return movie;
 
     //method #2
-    return Movie.findByIdAndUpdate(movieId, {$push: {casts: castId}});
+    return Movie.findByIdAndUpdate(movieId, {$push: {casts: {cast: castId, character}}});
   },
 };

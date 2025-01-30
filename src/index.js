@@ -11,7 +11,7 @@ try {
     const uri = 'mongodb://127.0.0.1:27017/magic-movies'
     await mongoose.connect(uri);
 
-    console.log('DB connected Successfuly');
+    console.log('DB connected Successfully');
     
 } catch (err) {
     console.log('Cannot connect to DB');

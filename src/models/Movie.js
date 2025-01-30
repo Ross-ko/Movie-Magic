@@ -1,4 +1,4 @@
-import {Schema, model, Types} from 'mongoose'
+import { Schema, model, Types } from "mongoose";
 
 // create schema
 const movieSchema = new Schema({
@@ -10,14 +10,24 @@ const movieSchema = new Schema({
     imageUrl: String,
     rating: Number,
     description: String,
-    casts: [{
-        type: Types.ObjectId,
-        ref: 'Cast'
-    }],
+    casts: [
+        {
+            _id: false,
+            character: String,
+            cast: {
+                type: Types.ObjectId,
+                ref: "Cast",
+            },
+        },
+    ],
+    // casts: [{
+    //     type: Types.ObjectId,
+    //     ref: 'Cast'
+    // }],
 });
 
 // create model
-const Movie = model('Movie', movieSchema);
+const Movie = model("Movie", movieSchema);
 
 // export model
 export default Movie;
