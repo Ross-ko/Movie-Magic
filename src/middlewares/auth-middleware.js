@@ -19,6 +19,8 @@ export const authMiddleware = (req, res, next) => {
         next();
     } catch (err) {
         // invalid token
+        res.clearCookie('auth');
+        res.redirect('auth/login');
     }
         
     // DON'T forget guest users
