@@ -3,6 +3,7 @@ import handlebars from 'express-handlebars';
 import routes from './routes.js';
 import showRatingHelper from './helpers/rating-helper.js';
 import mongoose from 'mongoose';
+import cookieParser from 'cookie-parser';
 
 const app = express();
 
@@ -35,6 +36,7 @@ app.set('views', './src/views');
 // express config
 app.use('/static', express.static('src/public'));
 app.use(express.urlencoded({extended: false})); //learn express to parse form data
+app.use(cookieParser);
 
 // setup routes
 app.use(routes);
