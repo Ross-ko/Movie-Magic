@@ -36,7 +36,7 @@ app.set('views', './src/views');
 // express config
 app.use('/static', express.static('src/public'));
 app.use(express.urlencoded({extended: false})); //learn express to parse form data
-app.use(cookieParser);
+app.use(cookieParser());
 
 // setup routes
 app.use(routes);
