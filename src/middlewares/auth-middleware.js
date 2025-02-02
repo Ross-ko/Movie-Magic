@@ -22,8 +22,4 @@ export const authMiddleware = (req, res, next) => {
         res.clearCookie('auth');
         res.redirect('auth/login');
     }
-        
-    // DON'T forget guest users
-
-    
-}
+};

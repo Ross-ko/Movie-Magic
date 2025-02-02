@@ -20,6 +20,10 @@ const movieSchema = new Schema({
             },
         },
     ],
+    creator: {
+        type: Types.ObjectId,
+        ref: 'User',
+    }
     // casts: [{
     //     type: Types.ObjectId,
     //     ref: 'Cast'
