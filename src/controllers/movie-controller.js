@@ -28,7 +28,7 @@ movieController.post('/create', async (req, res) => {
 movieController.get('/:movieId/details', async (req, res) => {
     const movieId = req.params.movieId;
     const movie = await movieService.getOneWithCast(movieId);
-    const isCreator = movie.creator && movie.creator.toString() === req.user?.id;
+    const isCreator = movie.creator?.equals(req.user?.id);
 
     // const casts = await castService.getAll(movie.casts); - дърводелската
 
